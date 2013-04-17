@@ -1,0 +1,48 @@
+@background-color: rgb(216, 223, 216);
+@first: 1px;
+@noTransparant: 1;
+
+body {
+  background-color: @background-color !important;
+}
+
+// Rounded-Object
+.rounded(@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Text Shadow
+.text-med-shadow(@first: 1px, @white: #fff){
+  -webkit-text-shadow: @first @first @white;
+  -moz-text-shadow: @first @first @white;
+  -ms-text-shadow: @first @first @white;
+  -o-text-shadow: @first @first @white;
+  text-shadow: @first @first @white;
+}
+
+.actived {
+  opacity: @noTransparant !important;
+}
+
+
+.text-center(@center: @center) {
+  text-align: @center;
+}
+
+.effect(@fast: .25) {
+  -webkit-transition: opacity @fast ease ease-in-out;
+     -moz-transition: opacity @fast ease ease-in-out;
+      -ms-transition: opacity @fast ease ease-in-out;
+       -o-transition: opacity @fast ease ease-in-out;
+          transition: opacity @fast ease ease-in-out;
+}
+
+.grayscale(@full: 50%) {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(@full); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}

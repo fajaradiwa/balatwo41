@@ -1,0 +1,20 @@
+#inner
+  h1.text-center.text-med-shadow
+    | Signin
+  .image-container.text-center
+    = link_to image_tag('/assets/logo41long.png', class: "img-menu grayscale", rel: "tolltip", title: "Main Menu", data: {placement: "right"}), "#"
+    #main-menu.hide
+      .title
+        h2 Welcome on Board
+      form
+        input type="text"
+      | asgdagsda
+      | asjdlasjd alsjdl
+
+javascript:
+  $(".img-menu").tooltip();
+  $(".img-menu").click("click", function() {
+    $("#main-menu").slideToggle("slow");
+    $(".img-menu").attr("class", "active");
+  });
+

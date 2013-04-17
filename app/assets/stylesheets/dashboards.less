@@ -1,0 +1,39 @@
+// Place all the styles related to the dashboards controller here.
+// They will automatically be included in application.css.
+// You can use Less here: http://lesscss.org/
+
+#inner {
+  width: @fullWidth;
+  margin-top: 8%;
+  h1 {
+    .text-med-shadow;
+    color: rgb(132, 141, 153);
+  }
+  .image-container {
+    .text-center;
+    img {
+      // .grayscale;
+      width: 40%;
+      &:hover {
+        // .grayscale(0);
+        .effect;
+        opacity: 1;
+      }
+    }
+    #main-menu {
+      background-color: @white;
+      width: 34.2%;
+      top: 25.9%;
+      left: 31.7%;
+      box-shadow: rgb(204, 204, 204) 0px 0px 7px;
+      padding: 75px 15px 30px 15px;
+      border-bottom: 1px solid #ccc;
+      .rounded(4px);
+      .title {
+        h2{
+          .text-med-shadow(@grayLight);
+        }
+      }
+    }
+  }
+}
